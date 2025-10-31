@@ -1,16 +1,19 @@
+
+<h1>BasicToken</h1>
+
 ```
- // SPDX-License-Identifier: MIT
- pragma solidity ^0.8.30;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
- import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
- contract BasicToken is ERC20 {
-     constructor(
-         string memory name,
-         string memory symbol,
-         uint256 initialSupply
-     ) ERC20(name, symbol) {
-         _mint(msg.sender, initialSupply * 10**decimals());
-     }
- }
+contract BasicToken is ERC20 {
+    constructor(
+        string memory name,
+        string memory symbol,
+        uint256 initialSupply
+    ) ERC20(name, symbol) {
+        _mint(msg.sender, initialSupply * 10**decimals());
+    }
+}
 ```
